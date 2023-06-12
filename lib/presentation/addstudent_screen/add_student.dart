@@ -23,6 +23,7 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
   String imagePath = 'x';
 
   Future<void> takePhoto() async {
+    // ignore: non_constant_identifier_names
     final PickedFile =
         await ImagePicker().pickImage(source: ImageSource.gallery);
     if (PickedFile != null) {
@@ -69,7 +70,6 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
   Widget textFieldNum({required TextEditingController myController, hintName}) {
     return TextFormField(
       keyboardType: TextInputType.number,
-      // textCapitalization: TextCapitalization.characters,
       controller: myController,
       cursorColor: Colors.black,
       style: const TextStyle(color: Colors.black),
@@ -109,8 +109,6 @@ class _AddStudentScreenState extends State<AddStudentScreen> {
   }
 
   Widget szdBox = const SizedBox(height: 20);
-
-  //buider
 
   @override
   Widget build(BuildContext context) {

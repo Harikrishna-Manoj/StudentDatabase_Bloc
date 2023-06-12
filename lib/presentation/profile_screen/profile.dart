@@ -1,7 +1,6 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:hive_samle/presentation/edit_profile_screen/editprofile.dart';
-
 import '../../domain/model/data_model.dart';
 
 // ignore: must_be_immutable

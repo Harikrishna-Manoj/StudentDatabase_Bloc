@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/adapters.dart';
+import 'package:hive_samle/application/search_bloc/search_dart_bloc.dart';
 import 'package:hive_samle/application/student_bloc/student_bloc.dart';
 
 import 'domain/model/data_model.dart';
@@ -22,8 +23,15 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) => StudentBloc(),
+    return MultiBlocProvider(
+      providers: [
+        BlocProvider(
+          create: (context) => StudentBloc(),
+        ),
+        BlocProvider(
+          create: (context) => SearchtBloc(),
+        ),
+      ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
